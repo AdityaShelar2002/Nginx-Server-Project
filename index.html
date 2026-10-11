@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover premium men's fashion at Aesthetics. Shop shirts, jackets, jeans and more.">
+    <title>AESTHETICS | Men's Fashion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="announcement">
+        Flat 40% OFF on selected styles | Free shipping over ₹999
+    </div>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="#home" class="logo">
+                AESTHETICS
+                <span>MEN'S FASHION</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Toggle menu" aria-expanded="false">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#new-arrivals">New Arrivals</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="searchToggle" aria-label="Search products">⌕</button>
+                <a href="#about" aria-label="About us">♙</a>
+                <button id="cartButton" aria-label="Shopping bag">
+                    Bag (<span id="cartCount">0</span>)
+                </button>
+            </div>
+        </nav>
+
+        <div class="search-box" id="searchBox" hidden>
+            <input type="search" id="searchInput"
+                   placeholder="Search shirts, jeans, jackets..."
+                   aria-label="Search clothing">
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Banner -->
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <p class="eyebrow">STYLE YOUR STORY</p>
+                <h1>Premium Fashion<br>For <span>Modern Men</span></h1>
+                <p>Trendy. Comfortable. Confident.</p>
+                <a href="#shop" class="btn">SHOP NOW &nbsp; →</a>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="container categories-section" id="categories">
+            <h2 class="section-title">Shop by Category</h2>
+
+            <div class="category-list">
+                <button class="category" data-filter="T-Shirts">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=300&q=80"
+                         alt="Men's T-shirt">
+                    <span>T-Shirts</span>
+                </button>
+
+                <button class="category" data-filter="Shirts">
+                    <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=300&q=80"
+                         alt="Men's shirts">
+                    <span>Shirts</span>
+                </button>
+
+                <button class="category" data-filter="Jeans">
+                    <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=300&q=80"
+                         alt="Denim jeans">
+                    <span>Jeans</span>
+                </button>
+
+                <button class="category" data-filter="Jackets">
+                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=300&q=80"
+                         alt="Men's jacket">
+                    <span>Jackets</span>
+                </button>
+
+                <button class="category" data-filter="Hoodies">
+                    <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=300&q=80"
+                         alt="Men's hoodie">
+                    <span>Hoodies</span>
+                </button>
+
+                <button class="category" data-filter="Accessories">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=300&q=80"
+                         alt="Fashion accessories">
+                    <span>Accessories</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Promotional Banners -->
+        <section class="container promo-grid" id="new-arrivals">
+            <div class="promo promo-one">
+                <div>
+                    <p class="eyebrow">NEW ARRIVALS</p>
+                    <h2>Men's Casual<br>Collection</h2>
+                    <a href="#shop" class="btn btn-light">EXPLORE NOW →</a>
+                </div>
+            </div>
+
+            <div class="promo promo-two">
+                <div>
+                    <p class="eyebrow">UP TO 40% OFF</p>
+                    <h2>Accessories<br>That Complete You</h2>
+                    <a href="#shop" class="btn btn-light">SHOP COLLECTION →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Collection -->
+        <section class="container products-section" id="shop">
+            <div class="section-heading">
+                <h2 class="section-title">Featured Products</h2>
+                <button class="text-button" id="showAll">View All →</button>
+            </div>
+
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="All">All</button>
+                <button class="filter-btn" data-filter="T-Shirts">T-Shirts</button>
+                <button class="filter-btn" data-filter="Shirts">Shirts</button>
+                <button class="filter-btn" data-filter="Jeans">Jeans</button>
+                <button class="filter-btn" data-filter="Jackets">Jackets</button>
+                <button class="filter-btn" data-filter="Hoodies">Hoodies</button>
+            </div>
+
+            <div class="product-grid" id="productGrid">
+
+                <article class="product-card" data-category="T-Shirts"
+                         data-name="Classic Cotton T-Shirt" data-price="699">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=650&q=85"
+                             alt="Classic cotton T-shirt" loading="lazy">
+                        <span class="sale-badge">30% OFF</span>
+                        <button class="favorite" aria-label="Add T-shirt to favorites">♡</button>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">T-SHIRTS</p>
+                        <h3>Classic Cotton T-Shirt</h3>
+                        <p class="price">₹699 <del>₹999</del></p>
+                        <button class="add-cart">ADD TO BAG +</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="Shirts"
+                         data-name="Checked Casual Shirt" data-price="899">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=650&q=85"
+                             alt="Checked casual shirt" loading="lazy">
+                        <span class="sale-badge">20% OFF</span>
+                        <button class="favorite" aria-label="Add shirt to favorites">♡</button>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">SHIRTS</p>
+                        <h3>Checked Casual Shirt</h3>
+                        <p class="price">₹899 <del>₹1,199</del></p>
+                        <button class="add-cart">ADD TO BAG +</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="Jeans"
+                         data-name="Slim Fit Denim Jeans" data-price="1199">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=650&q=85"
+                             alt="Slim fit denim jeans" loading="lazy">
+                        <span class="sale-badge">25% OFF</span>
+                        <button class="favorite" aria-label="Add jeans to favorites">♡</button>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">JEANS</p>
+                        <h3>Slim Fit Denim Jeans</h3>
+                        <p class="price">₹1,199 <del>₹1,599</del></p>
+                        <button class="add-cart">ADD TO BAG +</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="Jackets"
+                         data-name="Urban Casual Jacket" data-price="1499">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=650&q=85"
+                             alt="Urban casual jacket" loading="lazy">
+                        <span class="sale-badge">25% OFF</span>
+                        <button class="favorite" aria-label="Add jacket to favorites">♡</button>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">JACKETS</p>
+                        <h3>Urban Casual Jacket</h3>
+                        <p class="price">₹1,499 <del>₹1,999</del></p>
+                        <button class="add-cart">ADD TO BAG +</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="Hoodies"
+                         data-name="Everyday Comfort Hoodie" data-price="999">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=650&q=85"
+                             alt="Everyday comfort hoodie" loading="lazy">
+                        <span class="sale-badge">20% OFF</span>
+                        <button class="favorite" aria-label="Add hoodie to favorites">♡</button>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">HOODIES</p>
+                        <h3>Everyday Comfort Hoodie</h3>
+                        <p class="price">₹999 <del>₹1,299</del></p>
+                        <button class="add-cart">ADD TO BAG +</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="Accessories"
+                         data-name="Minimal Classic Watch" data-price="1299">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=650&q=85"
+                             alt="Minimal classic watch" loading="lazy">
+                        <button class="favorite" aria-label="Add watch to favorites">♡</button>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">ACCESSORIES</p>
+                        <h3>Minimal Classic Watch</h3>
+                        <p class="price">₹1,299</p>
+                        <button class="add-cart">ADD TO BAG +</button>
+                    </div>
+                </article>
+            </div>
+
+            <p class="empty-message" id="emptyMessage" hidden>
+                No products found. Try another category or search.
+            </p>
+        </section>
+
+        <!-- Brand Story -->
+        <section class="brand-story" id="about">
+            <p class="eyebrow">THE AESTHETICS PHILOSOPHY</p>
+            <h2>Less Noise. More Style.</h2>
+            <p>
+                We believe great style begins with simplicity.
+                Discover timeless essentials made for the modern man.
+            </p>
+            <a href="#shop" class="btn">DISCOVER YOUR STYLE</a>
+        </section>
+
+        <!-- Service Features -->
+        <section class="container service-grid">
+            <div><strong>♧ Free Shipping</strong><p>On orders above ₹999</p></div>
+            <div><strong>◇ Secure Shopping</strong><p>A smooth shopping experience</p></div>
+            <div><strong>↺ Easy Returns</strong><p>7-day return policy</p></div>
+            <div><strong>☏ Customer Support</strong><p>We're here to help</p></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <a href="#home" class="logo">AESTHETICS
+                    <span>MEN'S FASHION</span>
+                </a>
+                <p>Modern fashion. Timeless confidence.</p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#shop">Shop</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About Us</a>
+            </div>
+
+            <div>
+                <h3>Customer Care</h3>
+                <a href="#about">Shipping Policy</a>
+                <a href="#about">Returns & Refunds</a>
+                <a href="#about">Privacy Policy</a>
+                <a href="#about">Contact</a>
+            </div>
+
+            <div>
+                <h3>Join Our Newsletter</h3>
+                <p>Get updates on new styles and exclusive offers.</p>
+                <form id="newsletterForm" class="newsletter">
+                    <input type="email" id="newsletterEmail"
+                           placeholder="Your email address" required>
+                    <button type="submit">JOIN</button>
+                </form>
+                <p id="newsletterStatus" aria-live="polite"></p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            © <span id="year"></span> Aesthetics Men's Fashion. All rights reserved.
+        </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
